@@ -1,34 +1,37 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from "firebase/app";
 import {
   getAuth,
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
-} from 'firebase/auth';
-
-import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
-
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDxhGsQeVtt-t2GqECMg4InpPvY636YLi4",
-    authDomain: "car-resale-db.firebaseapp.com",
-    projectId: "car-resale-db",
-    storageBucket: "car-resale-db.appspot.com",
-    messagingSenderId: "818007329122",
-    appId: "1:818007329122:web:304066742e81ef7fb5043b",
-    measurementId: "G-QHNWXW1N00"
-  };
+  apiKey: "AIzaSyDxhGsQeVtt-t2GqECMg4InpPvY636YLi4",
+  authDomain: "car-resale-db.firebaseapp.com",
+  projectId: "car-resale-db",
+  storageBucket: "car-resale-db.appspot.com",
+  messagingSenderId: "818007329122",
+  appId: "1:818007329122:web:304066742e81ef7fb5043b",
+  measurementId: "G-QHNWXW1N00",
+};
 
 const firebaseApp = initializeApp(firebaseConfig);
 
-const provider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
 
-provider.setCustomParameters({
-  prompt: 'select_account',
+googleProvider.setCustomParameters({
+  prompt: "select_account",
 });
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = () =>
+  signInWithPopup(auth, googleProvider);
+export const signInWithGoogleRedirect = () =>
+  signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
 
@@ -38,7 +41,7 @@ export const createUserDocumentFromAuth = async (
 ) => {
   if (!userAuth) return;
 
-  const userDocRef = doc(db, 'users', userAuth.uid);
+  const userDocRef = doc(db, "users", userAuth.uid);
 
   const userSnapshot = await getDoc(userDocRef);
 
@@ -54,10 +57,21 @@ export const createUserDocumentFromAuth = async (
         ...additionalInformation,
       });
     } catch (error) {
-      console.log('error creating the user', error.message);
+      console.log("error creating the user", error.message);
     }
   }
 
   return userDocRef;
 };
 
+export const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+
+  return await signInWithEmailAndPassword(auth, email, password);
+};
