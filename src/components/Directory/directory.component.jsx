@@ -1,3 +1,4 @@
+import { isContentEditable } from "@testing-library/user-event/dist/utils";
 import CategoryItem from "../category-item/category-item.component";
 import "./directory.style.scss";
 
