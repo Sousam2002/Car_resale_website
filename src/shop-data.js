@@ -1,233 +1,239 @@
 const SHOP_DATA = [
-    {
-      title: 'SUVs',
-      items: [
-        {
-          id: 1,
-          name: 'Tata Nexon',
-          imageUrl: 'https://drive.google.com/file/d/1rCdyybSjwY9bsNLxflWKfVjP3ydi39l1/view?usp=drive_link',
-          price: 825000,
-        },
-        {
-          id: 2,
-          name: 'Hyundai Creta',
-          imageUrl: 'https://drive.google.com/file/d/1POQb2lZFMD_F0ZUgVk9u-_xf682WOHuP/view?usp=drive_link',
-          price: 629000,
-        },
-        {
-          id: 3,
-          name: 'Ford Ecosport',
-          imageUrl: 'https://drive.google.com/file/d/1zk2hb1idoBQe2o18IFb7HY76oKfQbWCv/view?usp=drive_link',
-          price: 807000,
-        },
-        {
-          id: 4,
-          name: 'Maruti Vitara Brezza',
-          imageUrl: 'https://drive.google.com/file/d/1iFYW4oToAw7MQNyfG1IrkJBnYwWAv9ZW/view?usp=drive_link',
-          price: 580000,
-        },
-        {
-          id: 5,
-          name: 'Toyota Urban Cruiser',
-          imageUrl: 'https://drive.google.com/file/d/1TMFQ5LrE3OPr9nupBBfXJ8UYlN7O0AXM/view?usp=drive_link',
-          price: 866000,
-        },
-        {
-          id: 6,
-          name: 'Hyundai Venue',
-          imageUrl: 'https://drive.google.com/file/d/1IxVQhJ-xsQD5Gbk83oDFthr_EMVnmV7g/view?usp=drive_link',
-          price: 899000,
-        },
-        {
-          id: 7,
-          name: 'Kia Sonet',
-          imageUrl: 'https://drive.google.com/file/d/1GVYsp-ZBsD0ic_ZFD_aqj9kaOsjbShux/view?usp=drive_link',
-          price: 993000,
-        },
-        {
-          id: 8,
-          name: 'Jeep Compass',
-          imageUrl: 'https://drive.google.com/file/d/1-SBN2RwrSRDUc1dcUpcJjbXjKp56ss5p/view?usp=drive_link',
-          price: 2550000,
-        },
-      ],
-    },
-    {
-      title: 'Sedan',
-      items: [
-        {
-          id: 10,
-          name: 'Hyundai Verna',
-          imageUrl: 'https://drive.google.com/file/d/1eIFv4qGKJRLjQwAhoD84JsOVM3iLKdsF/view?usp=drive_link',
-          price: 1096000,
-        },
-        {
-          id: 11,
-          name: 'Maruti Dzire',
-          imageUrl: 'https://drive.google.com/file/d/1egIW03yBKD1LzFiENu03wkSgJcMT6FBK/view?usp=drive_link',
-          price: 650000,
-        },
-        {
-          id: 12,
-          name: 'Honda City',
-          imageUrl: 'https://drive.google.com/file/d/1odKYie18r2po2wt7dgajRHmrASf-6lf2/view?usp=drive_link',
-          price: 1157000,
-        },
-        {
-          id: 13,
-          name: 'Hyundai Aura',
-          imageUrl: 'https://drive.google.com/file/d/1KMU8N0JjY7moqvDMZediIwSvowZ-pLSw/view?usp=drive_link',
-          price: 630000,
-        },
-        {
-          id: 14,
-          name: 'Volkswagen Virtus',
-          imageUrl: 'https://drive.google.com/file/d/1WZFT9jIfJftdRvEo9we0K9vN7-leMj8g/view?usp=drive_link',
-          price: 1148000,
-        },
-        {
-          id: 15,
-          name: 'Honda Amaze',
-          imageUrl: 'https://drive.google.com/file/d/19CxJoF0wwsP9Eenck0P2hyN79OQa9MQM/view?usp=drive_link',
-          price: 750000,
-        },
-        {
-          id: 16,
-          name: 'Skoda Slavia',
-          imageUrl: 'https://drive.google.com/file/d/1UvdVoBYtA0fD-3sE-6wourTjdV2ftmcG/view?usp=drive_link',
-          price: 1139000,
-        },
-        {
-          id: 17,
-          name: 'Maruti Ciaz',
-          imageUrl: 'https://drive.google.com/file/d/1UvZ0xAadjuqP9FMw9zyUUYCyn6tbyMWd/view?usp=drive_link',
-          price: 930000,
-        },
-      ],
-    },
-    {
-      title: 'Hatchback',
-      items: [
-        {
-          id: 18,
-          name: 'Maruti Swift',
-          imageUrl: 'https://drive.google.com/file/d/1YPrE93SFTTL7eurq46uXGd8yS2xMkZ9e/view?usp=drive_link',
-          price: 600000,
-        },
-        {
-          id: 19,
-          name: 'Maruti Baleno',
-          imageUrl: 'https://drive.google.com/file/d/1FVsyyX1pUMoSn8Wsi87FcCROoqqqKgz1/view?usp=drive_link',
-          price: 661000,
-        },
-        {
-          id: 20,
-          name: 'Tata Altroz',
-          imageUrl: 'https://drive.google.com/file/d/1bGE-x3NRdOxY5uQg8ma8W62M8g777-Gg/view?usp=drive_link',
-          price: 660000,
-        },
-        {
-          id: 21,
-          name: 'Maruti WagnoR',
-          imageUrl: 'https://drive.google.com/file/d/10djKInbTWaUfGEjzWBwG4OUK4R2bYR8d/view?usp=drive_link',
-          price: 554000,
-        },
-        {
-          id: 22,
-          name: 'Hyundai i20',
-          imageUrl: 'https://drive.google.com/file/d/10wFpdg4797WP2_zAVh_k9IJwKSoTd3rX/view?usp=drive_link',
-          price: 746000,
-        },
-      ],
-    },
-    {
-      title: 'Trucks',
-      items: [
-        {
-          id: 23,
-          name: 'Toyota Hilux',
-          imageUrl: 'https://drive.google.com/file/d/1G4hAgD5GLLHvqbBdVBBh2OI4zi-K8utN/view?usp=drive_link',
-          price: 3040000,
-        },
-        {
-          id: 24,
-          name: 'Mahindra Bolero Camper',
-          imageUrl: 'https://drive.google.com/file/d/1vR6ib0fH-kvvIg81bmqp9z-9alAehhIw/view?usp=drive_link',
-          price: 927000,
-        },
-        {
-          id: 25,
-          name: 'ISUZU D-max',
-          imageUrl: 'https://drive.google.com/file/d/1h5sqkMyFC9MFXU8RKN8l4mlxBQuM6YWk/view?usp=drive_link',
-          price: 1040000,
-        },
-        {
-          id: 26,
-          name: 'ISUZU V-cross',
-          imageUrl: 'https://drive.google.com/file/d/10cQIc6S8Hzcm87Z4aGkyBXPblWiP5oye/view?usp=drive_link',
-          price: 2207000,
-        },
-        {
-          id: 27,
-          name: 'Tata Yodha Pickup',
-          imageUrl: 'https://drive.google.com/file/d/18PBj9gYfyd1bc1LKCPcp29SfMRvPn6ql/view?usp=drive_link',
-          price: 605000,
-        },
-        {
-          id: 28,
-          name: 'Mahindra Bolero Maxitruck Plus',
-          imageUrl: 'https://drive.google.com/file/d/17UaElDO6hMfbP-bvXYUoN0Nrc_C5Rsaq/view?usp=drive_link',
-          price: 749000,
-        },
-        {
-          id: 29,
-          name: 'Isuzu Hi-Lander',
-          imageUrl: 'https://drive.google.com/file/d/127a77nRGu6YkcYzwjsULuppSCa7SfUPO/view?usp=drive_link',
-          price: 1950000,
-        },
-      ],
-    },
-    {
-      title: 'Accessories',
-      items: [
-        {
-          id: 30,
-          name: 'Car Body Covers',
-          imageUrl: 'https://drive.google.com/file/d/1ls9e8mOZIvZVl6IXa8QMqMwtHLj-1ir4/view?usp=drive_link',
-          price: 325,
-        },
-        {
-          id: 31,
-          name: 'Car Organizers',
-          imageUrl: 'https://drive.google.com/file/d/1GKVaoerxtjCHjkV-aEY5nJDreCkFOcHo/view?usp=drive_link',
-          price: 1362,
-        },
-        {
-          id: 32,
-          name: 'Car Cushions',
-          imageUrl: 'https://drive.google.com/file/d/1xwvpcua6_cOqd1LgB_eGJcMXq3eM7pgJ/view?usp=drive_link',
-          price: 1500,
-        },
-        {
-          id: 33,
-          name: 'Tool Kit',
-          imageUrl: 'https://drive.google.com/file/d/1U7OOSTCxdA_3uHMAt5uaIrQd5vj20NWs/view?usp=drive_link',
-          price: 1249,
-        },
-        {
-          id: 34,
-          name: 'Stearing Wheel Cover',
-          imageUrl: 'https://drive.google.com/file/d/1kpKANd_SoLF0ahMHIoZlzmSDHRF6S1Wo/view?usp=drive_link',
-          price: 729,
-        },
-        {
-          id: 35,
-          name: 'Seat Covers',
-          imageUrl: 'https://drive.google.com/file/d/1Jgk1L-tHkFcS578jERBk-kzDHF83oIud/view?usp=drive_link',
-          price: 800,
-        },
-      ],
-    },
-  ];
+  {
+    title: 'Hats',
+    items: [
+      {
+        id: 1,
+        name: 'Brown Brim',
+        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        price: 25,
+      },
+      {
+        id: 2,
+        name: 'Blue Beanie',
+        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+        price: 18,
+      },
+      {
+        id: 3,
+        name: 'Brown Cowboy',
+        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+        price: 35,
+      },
+      {
+        id: 4,
+        name: 'Grey Brim',
+        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
+        price: 25,
+      },
+      {
+        id: 5,
+        name: 'Green Beanie',
+        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
+        price: 18,
+      },
+      {
+        id: 6,
+        name: 'Palm Tree Cap',
+        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
+        price: 14,
+      },
+      {
+        id: 7,
+        name: 'Red Beanie',
+        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
+        price: 18,
+      },
+      {
+        id: 8,
+        name: 'Wolf Cap',
+        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
+        price: 14,
+      },
+      {
+        id: 9,
+        name: 'Blue Snapback',
+        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
+        price: 16,
+      },
+    ],
+  },
+  {
+    title: 'Sneakers',
+    items: [
+      {
+        id: 10,
+        name: 'Adidas NMD',
+        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
+        price: 220,
+      },
+      {
+        id: 11,
+        name: 'Adidas Yeezy',
+        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
+        price: 280,
+      },
+      {
+        id: 12,
+        name: 'Black Converse',
+        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
+        price: 110,
+      },
+      {
+        id: 13,
+        name: 'Nike White AirForce',
+        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
+        price: 160,
+      },
+      {
+        id: 14,
+        name: 'Nike Red High Tops',
+        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
+        price: 160,
+      },
+      {
+        id: 15,
+        name: 'Nike Brown High Tops',
+        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
+        price: 160,
+      },
+      {
+        id: 16,
+        name: 'Air Jordan Limited',
+        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
+        price: 190,
+      },
+      {
+        id: 17,
+        name: 'Timberlands',
+        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
+        price: 200,
+      },
+    ],
+  },
+  {
+    title: 'Jackets',
+    items: [
+      {
+        id: 18,
+        name: 'Black Jean Shearling',
+        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+        price: 125,
+      },
+      {
+        id: 19,
+        name: 'Blue Jean Jacket',
+        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
+        price: 90,
+      },
+      {
+        id: 20,
+        name: 'Grey Jean Jacket',
+        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
+        price: 90,
+      },
+      {
+        id: 21,
+        name: 'Brown Shearling',
+        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
+        price: 165,
+      },
+      {
+        id: 22,
+        name: 'Tan Trench',
+        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
+        price: 185,
+      },
+    ],
+  },
+  {
+    title: 'Womens',
+    items: [
+      {
+        id: 23,
+        name: 'Blue Tanktop',
+        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
+        price: 25,
+      },
+      {
+        id: 24,
+        name: 'Floral Blouse',
+        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
+        price: 20,
+      },
+      {
+        id: 25,
+        name: 'Floral Dress',
+        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+        price: 80,
+      },
+      {
+        id: 26,
+        name: 'Red Dots Dress',
+        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
+        price: 80,
+      },
+      {
+        id: 27,
+        name: 'Striped Sweater',
+        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
+        price: 45,
+      },
+      {
+        id: 28,
+        name: 'Yellow Track Suit',
+        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
+        price: 135,
+      },
+      {
+        id: 29,
+        name: 'White Blouse',
+        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
+        price: 20,
+      },
+    ],
+  },
+  {
+    title: 'Mens',
+    items: [
+      {
+        id: 30,
+        name: 'Camo Down Vest',
+        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+        price: 325,
+      },
+      {
+        id: 31,
+        name: 'Floral T-shirt',
+        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        price: 20,
+      },
+      {
+        id: 32,
+        name: 'Black & White Longsleeve',
+        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        price: 25,
+      },
+      {
+        id: 33,
+        name: 'Pink T-shirt',
+        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        price: 25,
+      },
+      {
+        id: 34,
+        name: 'Jean Long Sleeve',
+        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        price: 40,
+      },
+      {
+        id: 35,
+        name: 'Burgundy T-shirt',
+        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        price: 25,
+      },
+    ],
+  },
+];
 
-  export default SHOP_DATA;
+export default SHOP_DATA;

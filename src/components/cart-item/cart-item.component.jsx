@@ -1,20 +1,17 @@
-import "./cart-item.styles.scss";
-// import { LazyLoadImage } from "react-lazy-load-image-component";
+import { CartItemContainer, ItemDetails } from './cart-item.styles';
+
 const CartItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
-  // var url="https://drive.google.com/thumbnail?id=";
-  // console.log(imageUrl)
-  // console.log("hey");
   return (
-    <div className='cart-item-container'>
+    <CartItemContainer>
       <img src={`/images/${imageUrl}`} alt={`${name}`} />
-      <div className='item-details'>
-        <span className='name'>{name}</span>
-        <span className='price'>
-          {quantity} x ${price}
+      <ItemDetails>
+        <span>{name}</span>
+        <span>
+          {quantity} x Rs {price}
         </span>
-      </div>
-    </div>
+      </ItemDetails>
+    </CartItemContainer>
   );
 };
 
